@@ -11,7 +11,7 @@ import 'location_page.dart';
 import 'event_page.dart';
 import 'search_page.dart';
 import 'people_page.dart';
-import 'Universal_Demo.dart';
+import 'gridview_builder.dart';
 
 Widget customDrawer(BuildContext context){
   return Container(
@@ -103,25 +103,25 @@ Widget customDrawer(BuildContext context){
               ),
           ),
           Card(
-              borderOnForeground: true,
-              child: ListTile(
-                leading: Icon(Icons.search),
-                title: Text('Search'),
-                onTap: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => search_page()));
-                },
-              ),
+            borderOnForeground: true,
+            child: ListTile(
+              leading: Icon(Icons.search),
+              title: Text('Search'),
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => search_page()));
+              },
+            ),
           ),
-          // Card(
-          //   borderOnForeground: true,
-          //   // child: ListTile(
-          //   //   leading: Icon(Icons.account_box_rounded),
-          //   //   title: Text('Login / Register'),
-          //   //   onTap: (){
-          //   //     Navigator.of(context).push(MaterialPageRoute(builder: (context) => login_register_page()));
-          //   //   },
-          //   // ),
-          // ),
+          Card(
+            borderOnForeground: true,
+            child: ListTile(
+              leading: Icon(Icons.account_box_rounded),
+              title: Text('Grid View Builder'),
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => gridview_builder()));
+              },
+            ),
+          ),
         ],
       ),
   );

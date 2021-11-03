@@ -54,6 +54,9 @@ flutter:
   - assets/turtle.jpg
   - assets/zebra.jpg
   - assets/puppies.jpg
+  - assets/sheikh_hasina/sheikh_hasina.jpg
+  - assets/sheikh_hasina/rohingya_shelter.jpg
+  - assets/sheikh_hasina/padma_bridge.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
