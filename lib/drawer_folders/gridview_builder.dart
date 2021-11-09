@@ -46,47 +46,46 @@ Widget gridview_builder(){
     // shadowColor: Colors.green,
   ),
       body: GridView.builder(
-  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-  maxCrossAxisExtent: 200,
-    mainAxisSpacing: 20,
-  ),
-  itemCount: productList.length,
-  itemBuilder: (context,index){
-  return Container(
-  child: Card(
-  elevation: 10,
-  shadowColor: Colors.red,
-  child: Column(
-  children: [
-  Expanded(
-  flex: 3,
-  child: Stack(
-  children: [
-  Image.network(productList[index]['image'],
-  width: double.infinity,
-  fit: BoxFit.contain,),
-  Positioned(
-  top: 10,
-  right: 10,
-  child: Container(
-  height: 20,
-  width: 30,
-  color: Colors.deepOrange,child: Text(productList[index]['rate'])),
-  )
-  ],
-  ),
-  ),
-  Expanded(
-  flex:1,
-  child: Center(
-  child: Text(productList[index]['name']),
-  ),
-  ),
-  ],
-  ),
-  ),
-  );
-  },
-  ),
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 200,
+        mainAxisSpacing: 20,
+        ),
+        itemCount: productList.length,
+        itemBuilder: (context,index){
+            return Container(
+              child: Card(
+                elevation: 10,
+                shadowColor: Colors.red,
+                child: Column(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Stack(
+                        children: [
+                          Image.network(productList[index]['image'],width: double.infinity,fit: BoxFit.contain,),
+                          Positioned(
+                            top: 10,
+                            right: 10,
+                            child: Container(
+                              height: 20,
+                              width: 30,
+                              color: Colors.deepOrange,child: Text(productList[index]['rate'])
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                    flex:1,
+                    child: Center(
+                      child: Text(productList[index]['name']),
+                    ),
+                  ),
+                  ],
+                ),
+              ),
+            );
+        },
+      ),
   );
 }

@@ -12,6 +12,7 @@ import 'event_page.dart';
 import 'search_page.dart';
 import 'people_page.dart';
 import 'gridview_builder.dart';
+import 'search_product.dart';
 
 Widget customDrawer(BuildContext context){
   return Container(
@@ -119,6 +120,16 @@ Widget customDrawer(BuildContext context){
               title: Text('Grid View Builder'),
               onTap: (){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => gridview_builder()));
+              },
+            ),
+          ),
+          Card(
+            borderOnForeground: true,
+            child:ListTile(
+              leading: Icon(Icons.search),
+              title: Text('Search Product'),
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => search_product()));
               },
             ),
           ),

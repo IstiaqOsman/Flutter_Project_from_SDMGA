@@ -46,7 +46,7 @@ Widget home_page(){
     child: Container(
       width: double.infinity,
       padding: EdgeInsets.all(10),
-      margin: EdgeInsets.only(top: 60),
+      // margin: EdgeInsets.only(top: 60),
       color: Colors.white,
       child: Column(
         children: <Widget>[
