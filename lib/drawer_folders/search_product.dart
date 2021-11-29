@@ -12,7 +12,7 @@ class _State extends State<search_product>{
   // @override
   void initState(){
     copyUsers = duplicateUsers;
-    initState();
+    // initState();
   }
   void searchUser(String query){
     List<Map<String,dynamic>> similarUsers=[];
@@ -32,40 +32,54 @@ class _State extends State<search_product>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
-        body: Padding(
-          padding: EdgeInsets.all(5),
-          child: Column(
-            children: [
-              TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Search'
-                ),
-                onChanged: (myquery) => searchUser(myquery),
-              ),
-              Container(
-                height: 300,
-                width: double.infinity,
-                child: copyUsers.isNotEmpty ? ListView.builder(
-                  itemCount: copyUsers.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      elevation: 6,
-                      child: Center(
-                        child: ListTile(
-                          // leading: Icon(Icons.home),
-                          title: Text(copyUsers[index]['name']),
-
-                        ),
+          appBar: AppBar(),
+          body: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.all(5),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Search'
                       ),
-                    );
-                  },
-                ):Center(child: Text('Opps No Users', style: TextStyle(fontSize: 45),)),
-              )
-            ],
-          ),
-        )
-    );
+                      onChanged: (myquery) => searchUser(myquery),
+                    ),
+                    Container(
+                      height: 1000,
+                      width: double.infinity,
+                      child: copyUsers.isNotEmpty ? ListView.builder(
+                        itemCount: copyUsers.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Card(
+                            elevation: 6,
+                            child: Center(
+                              child: ListTile(
+                                // leading: Icon(Icons.home),
+                                title: Text(copyUsers[index]['name']),
+                              ),
+                            ),
+                          );
+                        },
+                      ):Center(child: Text('Opps No Users', style: TextStyle(fontSize: 20),)),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          )
+      );
+
+    // return Scaffold(
+    //   appBar: AppBar(
+    //     title: Text('Search Page'),
+    //   ),
+    //   body: Column(
+    //     children: [
+    //       Text("Hello world")
+    //     ],
+    //   ),
+    // );
   }
 }

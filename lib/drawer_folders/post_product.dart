@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:untitled/drawer_folders/posts.dart';
 
-Future createPost(url, {required Map body}) async {
+Future createPost(String url, {required Map body}) async {
   return http.post(Uri.parse(url),body: body).then((http.Response response){
     if(response.statusCode == 201){
       return Post.fromJson(json.decode(response.body));

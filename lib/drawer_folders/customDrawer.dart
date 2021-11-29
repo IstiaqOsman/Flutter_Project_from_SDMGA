@@ -9,7 +9,6 @@ import 'community_page.dart';
 import 'hangouts_page.dart';
 import 'location_page.dart';
 import 'event_page.dart';
-import 'search_page.dart';
 import 'people_page.dart';
 import 'gridview_builder.dart';
 import 'search_product.dart';
@@ -105,16 +104,6 @@ Widget customDrawer(BuildContext context){
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => event_page()));
                   },
                 ),
-            ),
-            Card(
-              borderOnForeground: true,
-              child: ListTile(
-                leading: Icon(Icons.search),
-                title: Text('Search'),
-                onTap: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => search_page()));
-                },
-              ),
             ),
             Card(
               borderOnForeground: true,
