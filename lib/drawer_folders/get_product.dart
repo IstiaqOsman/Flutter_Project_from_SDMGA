@@ -32,7 +32,39 @@ class _state extends State<get_product> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('title'),
+          // leading: IconButton(
+          //   onPressed: (){
+          //
+          //   },
+          //   icon: const Icon(Icons.menu),
+          //   // tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip, icon: const Icon(Icons.menu),onPressed: (){},
+          // ),
+          title: Text('Get Product',),
+          actions: [
+            IconButton(
+                tooltip: 'Favourite', icon: const Icon(Icons.favorite,),onPressed: (){}
+            ),
+            IconButton(
+                tooltip: 'Search', icon: const Icon(Icons.search,),onPressed: (){}
+            ),
+            PopupMenuButton<Text>(
+                itemBuilder: (context){
+                  return [
+                    PopupMenuItem(
+                      child: Text('First One'),
+                    ),
+                    PopupMenuItem(
+                      child: Text('Second One'),
+                    ),
+                    PopupMenuItem(
+                      child: Text('Third One'),
+                    ),
+                  ];
+                })
+          ],
+          // title: Text('View'),
+          // elevation: 10,
+          // shadowColor: Colors.green,
         ),
         body: this.isloading
             ? Center(

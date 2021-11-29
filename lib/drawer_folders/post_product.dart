@@ -30,9 +30,41 @@ class post_product extends StatelessWidget{
         primaryColor:  Colors.deepOrange,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("create post")
-        ),
+          appBar: AppBar(
+            // leading: IconButton(
+            //   onPressed: (){
+            //
+            //   },
+            //   icon: const Icon(Icons.menu),
+            //   // tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip, icon: const Icon(Icons.menu),onPressed: (){},
+            // ),
+            title: Text('Create Post',),
+            actions: [
+              IconButton(
+                  tooltip: 'Favourite', icon: const Icon(Icons.favorite,),onPressed: (){}
+              ),
+              IconButton(
+                  tooltip: 'Search', icon: const Icon(Icons.search,),onPressed: (){}
+              ),
+              PopupMenuButton<Text>(
+                  itemBuilder: (context){
+                    return [
+                      PopupMenuItem(
+                        child: Text('First One'),
+                      ),
+                      PopupMenuItem(
+                        child: Text('Second One'),
+                      ),
+                      PopupMenuItem(
+                        child: Text('Third One'),
+                      ),
+                    ];
+                  })
+            ],
+            // title: Text('View'),
+            // elevation: 10,
+            // shadowColor: Colors.green,
+          ),
         body: Container(
           margin: const EdgeInsets.only(left: 8.0, right: 8.0),
           child: Column(
