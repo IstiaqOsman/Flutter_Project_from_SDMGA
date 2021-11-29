@@ -14,6 +14,7 @@ import 'gridview_builder.dart';
 import 'search_product.dart';
 import 'get_product.dart';
 import 'post_product.dart';
+import 'input_type/input_type.dart';
 
 Widget customDrawer(BuildContext context){
   return SingleChildScrollView(
@@ -142,6 +143,16 @@ Widget customDrawer(BuildContext context){
                 title: Text('Post Product'),
                 onTap: (){
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => post_product()));
+                },
+              ),
+            ),
+            Card(
+              borderOnForeground: true,
+              child:ListTile(
+                leading: Icon(Icons.search),
+                title: Text('Validating Input'),
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => input_type()));
                 },
               ),
             ),
