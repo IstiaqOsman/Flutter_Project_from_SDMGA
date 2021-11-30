@@ -170,31 +170,31 @@ class _State extends State<input_type>{
   }
 }
 
-class Sorting extends StatefulWidget {
-  _nState createState() => _nState();
-}
-
-class _nState extends State<Sorting> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
-        ),
-        padding: EdgeInsets.all(5),
-        itemCount: data.length,
-        itemBuilder: (ctx, i) {
-          return Card(
-            elevation: 5,
-            child: ListTile(
-              title: Text(data[i]['name']),
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
+// class Sorting extends StatefulWidget {
+//   _nState createState() => _nState();
+// }
+//
+// class _nState extends State<Sorting> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: GridView.builder(
+//         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//           crossAxisCount: 2,
+//           crossAxisSpacing: 10,
+//           mainAxisSpacing: 10,
+//         ),
+//         padding: EdgeInsets.all(5),
+//         itemCount: data.length,
+//         itemBuilder: (ctx, i) {
+//           return Card(
+//             elevation: 5,
+//             child: ListTile(
+//               title: Text(data[i]['name']),
+//             ),
+//           );
+//         },
+//       ),
+//     );
+//   }
+// }

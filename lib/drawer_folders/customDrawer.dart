@@ -15,6 +15,7 @@ import 'search_product.dart';
 import 'get_product.dart';
 import 'post_product.dart';
 import 'input_type/input_type.dart';
+import 'bottom_sheet.dart';
 
 Widget customDrawer(BuildContext context){
   return SingleChildScrollView(
@@ -153,6 +154,16 @@ Widget customDrawer(BuildContext context){
                 title: Text('Validating Input'),
                 onTap: (){
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => input_type()));
+                },
+              ),
+            ),
+            Card(
+              borderOnForeground: true,
+              child:ListTile(
+                leading: Icon(Icons.search),
+                title: Text('Bottom Sheet Example'),
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => bottom_sheet()));
                 },
               ),
             ),
