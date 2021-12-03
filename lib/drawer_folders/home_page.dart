@@ -8,7 +8,8 @@ Widget home_page(){
       "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, "
       "when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
       "software like Aldus PageMaker including versions of Lorem Ipsum.";
-  return Scaffold(appBar: AppBar(
+  return Scaffold(
+      appBar: AppBar(
     // leading: IconButton(
     //   onPressed: (){
     //
@@ -16,8 +17,8 @@ Widget home_page(){
     //   icon: const Icon(Icons.menu),
     //   // tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip, icon: const Icon(Icons.menu),onPressed: (){},
     // ),
-    title: Text('AppBar'),
-    actions: [
+      title: Text('AppBar'),
+      actions: [
       IconButton(
           tooltip: 'Favourite', icon: const Icon(Icons.favorite,),onPressed: (){}
       ),
@@ -42,7 +43,8 @@ Widget home_page(){
     // title: Text('View'),
     // elevation: 10,
     // shadowColor: Colors.green,
-  ),body: SingleChildScrollView(
+  ),
+      body: SingleChildScrollView(
     child: Container(
       width: double.infinity,
       padding: EdgeInsets.all(10),
