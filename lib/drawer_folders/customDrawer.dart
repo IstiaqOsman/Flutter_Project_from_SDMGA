@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/drawer_folders/ui/curved_n_bar.dart';
 // import 'profilepage.dart';
 import 'home_page.dart';
 // import 'login_register_page.dart';
@@ -164,6 +165,17 @@ Widget customDrawer(BuildContext context){
                 title: Text('Bottom Sheet Example'),
                 onTap: (){
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => bottom_sheet()));
+                },
+              ),
+            ),
+            Card(
+              borderOnForeground: true,
+              child:
+              ListTile(
+                leading: Icon(Icons.people),
+                title: Text('Curved Navigation Bar'),
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => curved_n_bar()));
                 },
               ),
             ),
