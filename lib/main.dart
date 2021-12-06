@@ -1,11 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/drawer_folders/customDrawer.dart';
 // import 'package:untitled/drawer_folders/Universal Demo.dart';
 import 'package:untitled/drawer_folders/demodata.dart';
-void main() => runApp(MaterialApp(
-  debugShowCheckedModeBanner: false,
-  home: MyApp(),
-));
+void main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: MyApp(),
+  ));
+}
 
 class MyApp extends StatefulWidget{
   @override

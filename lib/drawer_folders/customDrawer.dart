@@ -17,6 +17,7 @@ import 'get_product.dart';
 import 'post_product.dart';
 import 'input_type/input_type.dart';
 import 'bottom_sheet.dart';
+import 'login_page.dart';
 
 Widget customDrawer(BuildContext context){
   return SingleChildScrollView(
@@ -176,6 +177,17 @@ Widget customDrawer(BuildContext context){
                 title: Text('Curved Navigation Bar'),
                 onTap: (){
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => curved_n_bar()));
+                },
+              ),
+            ),
+            Card(
+              borderOnForeground: true,
+              child:
+              ListTile(
+                leading: Icon(Icons.people),
+                title: Text('Log In'),
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => login_page()));
                 },
               ),
             ),
