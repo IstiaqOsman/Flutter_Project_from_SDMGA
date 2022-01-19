@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp>{
           IconButton(
               tooltip: 'Search', icon: const Icon(Icons.search,),onPressed: (){}
           ),
-          PopupMenuButton<Text>(
+          PopupMenuButton<ButtonBar>(
               itemBuilder: (context){
                 return [
                   PopupMenuItem(

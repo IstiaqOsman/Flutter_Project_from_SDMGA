@@ -17,7 +17,7 @@ class login_page extends StatefulWidget{
 
 
 class _statee extends State<login_page>{
-    Future createUser(String email, String password) async{
+  Future createUser(String email, String password) async{
     try{
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email,
@@ -58,7 +58,6 @@ class _statee extends State<login_page>{
                   labelText: 'Email Address'
                 ),
               ),
-
           ),
           Padding(
             padding: EdgeInsets.all(20),
@@ -72,7 +71,6 @@ class _statee extends State<login_page>{
                   labelText: 'Password'
               ),
             ),
-
           ),
           Padding(
             padding: EdgeInsets.all(20),

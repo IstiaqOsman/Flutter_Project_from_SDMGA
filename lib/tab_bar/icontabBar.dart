@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:untitled/drawer_folders/customDrawer.dart';
 import 'package:untitled/main.dart';
 import 'package:untitled/drawer_folders/community_page.dart';
-
 Widget icontabBar() {
-
   String img = "assets/beauty.jpeg";
   return Scaffold(
       body: SingleChildScrollView(
-    child: SafeArea(
-      child: Column(
+      child: SafeArea(
+        child: Column(
         children: <Widget>[
           Center(
             child: Container(

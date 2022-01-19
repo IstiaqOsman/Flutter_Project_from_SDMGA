@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 Widget photo_page(){
   String img = "assets/beauty.jpeg";
-  return Scaffold(appBar: AppBar(
+  return Scaffold(
+      appBar: AppBar(
       // leading: IconButton(
       //   onPressed: (){
       //
@@ -39,8 +40,7 @@ Widget photo_page(){
   // elevation: 10,
   // shadowColor: Colors.green,
   ),
-  body: SingleChildScrollView(
-    child: Container(
+      body: SingleChildScrollView(child: Container(
       width: double.infinity,
       padding: EdgeInsets.all(10),
       margin: EdgeInsets.only(top: 60),

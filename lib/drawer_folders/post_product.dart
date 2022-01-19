@@ -31,13 +31,13 @@ class post_product extends StatelessWidget{
       ),
       home: Scaffold(
           appBar: AppBar(
-            // leading: IconButton(
-            //   onPressed: (){
-            //
-            //   },
-            //   icon: const Icon(Icons.menu),
-            //   // tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip, icon: const Icon(Icons.menu),onPressed: (){},
-            // ),
+            leading: IconButton(
+              onPressed: (){
+
+              },
+              icon: const Icon(Icons.menu),
+              // tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip, icon: const Icon(Icons.menu),onPressed: (){},
+            ),
             title: Text('Create Post',),
             actions: [
               IconButton(
@@ -76,7 +76,7 @@ class post_product extends StatelessWidget{
                 controller: titleController,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: "title...",
+                  hintText: "Title",
                   labelText: "Post Title"
                 )),
               SizedBox(
@@ -86,7 +86,7 @@ class post_product extends StatelessWidget{
                   controller: emailController,
                   decoration: const InputDecoration(
                       border: OutlineInputBorder(),
-                      hintText: "email...",
+                      hintText: "Email",
                       labelText: "Email Address"
                   )),
               SizedBox(
@@ -96,8 +96,8 @@ class post_product extends StatelessWidget{
                   controller: bodyController,
                   decoration: const InputDecoration(
                       border: OutlineInputBorder(),
-                      hintText: "Body...",
-                      labelText: "Body"
+                      hintText: "Body",
+                      labelText: "Post Body"
                   )),
               SizedBox(
                 height: 10,
@@ -117,7 +117,43 @@ class post_product extends StatelessWidget{
                 },
                 child: const Text('create'),
               ),
-              Text("Alert")
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                    builder: (BuildContext builder){
+                      return AlertDialog(
+                        backgroundColor: Colors.teal,
+                          title: Center(
+                            child: Column(
+                               children: [
+                                 Text(titleController.text),
+                                 Text(emailController.text),
+                                 Text(bodyController.text),
+                               ],
+                            ),
+                          ),
+                        actions: [
+                          Center(
+                            child: TextButton(
+                              onPressed: (){
+                                Navigator.of(context).pop();
+                              },child: Text("ok...I like it!!!"),
+                            ),
+                          )
+                        ],
+                      );
+                    },
+                  );
+
+                },
+                child: Text("Alert Dialogue"),
+
+              ),
+
             ],
           ),
         )
@@ -125,4 +161,3 @@ class post_product extends StatelessWidget{
     );
   }
 }
-// void main() => runApp(post_product());

@@ -93,54 +93,54 @@ List<String> images = <String>[
         // shadowColor: Colors.green,
       ),
       body: Container(
-        child: ListView.builder(
-            padding: const EdgeInsets.all(8),
-            // itemCount: titleref.length,
-            itemBuilder: (BuildContext context, int index) {
-              return GestureDetector(
-                // onTap: () {
-                //   setState(() {
-                //     // Navigator.of(context).push(MaterialPageRoute(builder: (context) => blogs()));
-                //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                //       content: Text('${names[index]}'),
-                //       duration: Duration(microseconds: 300),
-                //     ));
-                //   });
-                // },
-                child: Container(
-                    height: 200,
-                    margin: EdgeInsets.all(2),
-                    child: Card(
-                      elevation: 1,
-                      shadowColor: Colors.blue,
-                      child: Column(
-                        children: [
-                          Expanded(
-                            flex: 3,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20.0),
-                              child: Card(
-                                elevation: 20,
-                                shadowColor: Colors.green,
-                                child: Image.asset(
-                                  '${images[index]}',
-                                  height: 180.0,
-                                  width: double.infinity,
-                                  fit: BoxFit.cover,
+          child: ListView.builder(
+              padding: const EdgeInsets.all(8),
+              // itemCount: titleref.length,
+              itemBuilder: (BuildContext context, int index) {
+                return GestureDetector(
+                  // onTap: () {
+                  //   setState(() {
+                  //     // Navigator.of(context).push(MaterialPageRoute(builder: (context) => blogs()));
+                  //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  //       content: Text('${names[index]}'),
+                  //       duration: Duration(microseconds: 300),
+                  //     ));
+                  //   });
+                  // },
+                  child: Container(
+                      height: 200,
+                      margin: EdgeInsets.all(2),
+                      child: Card(
+                        elevation: 1,
+                        shadowColor: Colors.blue,
+                        child: Column(
+                          children: [
+                            Expanded(
+                              flex: 3,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Card(
+                                  elevation: 20,
+                                  shadowColor: Colors.green,
+                                  child: Image.asset(
+                                    '${images[index]}',
+                                    height: 180.0,
+                                    width: double.infinity,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Text('${names[index]}',style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                            ),
-                          )
-                        ],
-                      ),
-                    )),
-              );
-            }),
-      ),
+                            Expanded(
+                              flex: 1,
+                              child: Text('${names[index]}',style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                              ),
+                            )
+                          ],
+                        ),
+                      )),
+                );
+              }),
+        ),
     );
   }
